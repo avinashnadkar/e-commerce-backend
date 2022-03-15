@@ -30,7 +30,7 @@ router.post('/login', async (req, res) => {
     res.json({
         status: "success",
         code: 200,
-        message: "Welcome to Twitter.",
+        message: "Welcome to onlineShop.",
         results: {
             token: token,
             u_id: user._id,
