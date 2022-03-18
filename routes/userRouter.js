@@ -42,9 +42,6 @@ router.post('/login', async (req, res) => {
 })
 
 //Register user
-router.post('/login', (req, res) => {
-    res.send('server is running')
-})
 
 router.post('/register', async (req,res)=>{
     
