@@ -4,9 +4,11 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
+const cors = require('cors');
 
 //middlewares
 app.use(express.json());
+app.use(cors());
 
 //Connect to the database. the username and password is safe in .env file
 mongoose.connect(process.env.DB_URI,{

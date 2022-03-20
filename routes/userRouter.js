@@ -74,7 +74,8 @@ router.post('/register', async (req,res)=>{
                 token: token,
                 u_id: user._id,
                 name: user.name,
-                username: user.username
+                email : user.email,
+                address : user.address
             }
         })
     }).catch((err) => {
