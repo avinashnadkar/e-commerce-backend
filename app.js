@@ -4,6 +4,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
+const productRouter = require('./routes/productRouter');
 const cors = require('cors');
 
 //middlewares
@@ -26,6 +27,7 @@ db.once('open', () => console.log('connected to db'))
 //For user endpoint
 app.use('/user',userRouter);
 app.use('/admin',adminRouter)
+app.use('/category',productRouter);
 
 //Start server
 app.listen(process.env.port,()=>{
